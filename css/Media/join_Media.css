@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+
+
+
+
+@media only screen and (max-width:767px) {
+
+    .container{
+        padding-top: 0;
+    }
+    .header .inner-header .main-menu{
+        display: none;
+    }
+    
+    .container .inner-container .sections{
+        width:90%
+    }
+
+.container .inner-container .sections .section.sec2 .sec-con .news-con{
+        flex-direction: column;
+    }
+
+.container .inner-container .sections .section.sec2 .sec-con .news-con .news{
+    width:100%;
+    height:auto;
+    /* background: burlywood; */
+    }
+
+    .container .inner-container .sections .section.sec2 .sec-con .news-con .news.right{
+        margin-top: 0px;
+    }
+
+    .asideMusic{
+        width:10%;
+        max-width: 192px;
+        min-width: 192px;
+        height:auto;
+        min-height: 5.56vh;
+        border: 0px solid;
+        border-radius: 25px;
+        box-sizing: border-box;
+        position: fixed;
+        top:20%;
+        transform: translateY(-50%);
+        transform: translateX(-90%);
+    
+        opacity: 100%;
+        transition: all 1s;
+        padding-left: 20px;
+        z-index: 100;
+        background-color: aliceblue;
+    }
+
+    .container .inner-container .sections .section.sec2 .sec-con .news-con .news>ul>li .news-text p{
+        font-size: 1.5rem;
+    }
+
+
+
+
+.h-header{
+
+        width:100%;
+        height:auto;
+        position: fixed;
+        background-color: transparent;
+        top: 0%;
+        right: 0%;
+        z-index: 500;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding:0 10px;
+        box-sizing: border-box;
+        align-items: center;
+}
+
+.h-logo{
+    width:110px;
+    height:auto;
+}
+
+.h-header .h-gnb{
+    width:auto;
+    height:auto;
+    display: flex;
+    transition: all 1s;
+}
+
+/* .h-header .h-gnb>a{
+    background-color: white;
+} */
+
+.h-header .h-gnb:hover{
+    background-color: #ccc;
+}
+
+.h-header .h-gnb>a{
+    font-size: 1.5rem
+}
+
+.h-header .h-gnb ul{
+    width:100px;
+    /* height:30px; */
+    position: absolute;
+    transform: translateX(100%) translateY(0%);
+    
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.h-header .h-gnb:hover ul{
+
+    transform: translateX(-100%) translateY(0%);
+    background-color:white;
+    transition: all 0.5s;
+}
+
+.h-header .h-gnb ul li{
+    width:100%;
+    border: 0x solid;
+    box-sizing: border-box;
+    line-height: 2rem;
+    cursor: pointer;
+
+}
+
+.h-header .h-gnb ul li>a{
+    display: block;
+    /* background: blue; */
+}
+
+.h-header .h-gnb>ul>li.first:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+.h-header .h-gnb>ul>li.first>ul.subUl>li>a:hover{
+    background-color: black;
+    color: white;
+}
+
+.h-header .h-gnb ul>li> ul.subUl{
+    width:auto;
+    height:100%;
+    display: none;
+    text-indent: 2rem;
+    position: absolute;
+    top:0;
+    padding: 5px 10px;
+    left:0px;
+    text-indent: 0;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.h-header .h-gnb ul>li:hover ul.subUl{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    background-color:transparent;
+    background-color: white;
+}
+}

@@ -1,0 +1,200 @@
+@charset "utf-8";
+@import url(../common/reset.css);
+
+
+
+#wrap{
+    position: relative;
+    width:100vw;
+    height:100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+
+
+.top-left-logo{
+    /* width: 100px; */
+    height:auto;
+    position: fixed;
+    top:5%;
+    left:5%;
+    z-index: 1;
+    font-family:'Nanum Myeongjo', serif;
+    font-size: 2vw;
+    text-align: center;
+    opacity: 0;
+
+    
+}
+
+
+
+.menu-list{
+    width:5%;
+    height:auto;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.menu-list>img{
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+
+.h-header{
+    width:20%;
+    height:100vh;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    text-align: center;
+    /* right:-100%; */
+    transform: translateX(100%);
+    transition: all 0.3s;
+    background-color: white;
+    
+}
+
+.h-header .closeBtn{
+    border: 0px solid;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    line-height: 3rem;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.h-header>ul .closeBtn:hover{
+    transform: scale(1.1);
+    
+}
+
+
+.h-header>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+
+.h-header>ul>li{
+    width: 100%;
+    border: 0px solid;
+}
+
+.h-header>ul>li:hover{
+    background-color: rgb(83, 79, 79);
+    color: white;
+}
+
+.h-header>ul>li:hover>a{
+    color: white;
+}
+
+.h-header>ul>li>ul.subUl{
+    width:100%;
+    background-color: thistle;
+    text-align: center;
+    display: none;
+    height: auto;
+    transition: all 0.3s;
+}
+
+.h-header>ul>li>ul.subUl>li:hover{
+    background-color: rgb(253, 200, 253);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+    
+
+/* .h-header>ul>li:hover>ul.subUl{
+    display: block;
+} */
+
+
+.container{
+    width: 100vw;
+    height:100vh;
+    border: 0px solid;
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 1;
+    
+}
+
+.container .img-section{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../img/main_index/profile/main.png) no-repeat  50% /cover    ;
+    /* opacity: 50%; */
+    filter: brightness(70%);
+    animation-name: autoImg;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+.container .img-section p{
+    filter: brightness(100%);
+}
+@keyframes autoImg{
+    0%{
+        filter: brightness(0%);
+    }
+
+    50%{
+        filter: brightness(40%);
+    }
+    100%{
+        filter: brightness(70%);
+    }
+}
+
+
+.container .main-title{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    /* transition: all 2s; */
+}
+
+
+.container .main-title p{
+    font-size: 4vw;
+    font-family:'Nanum Myeongjo', serif;
+    color: white;
+    font-weight: bolder;
+
+}
+
+
+@media only screen and (max-width:767px){
+
+
+    .h-header{
+        width: 40%;
+    }
+
+}

@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url(../common/reset.css);
+@import url(../common/header.css);
+@import url(../common/footer.css);
+
+
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 110px 0;
+}
+
+.container .inner-container {
+    width: 100%;
+    height: auto;
+}
+
+.container .inner-container .titleBox {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+
+.container .inner-container .titleBox>h1.title {
+    width: 30%;
+    height: auto;
+    line-height: 4rem;
+    margin: 0 auto;
+    border: 0px solid;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+
+.container .textSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+
+}
+
+.container .textSection .box {
+    width: 33.3333%;
+    height: auto;
+    border: 0px solid;
+    padding: 1% 2% 1%;
+}
+
+.container .textSection .box ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .textSection .box ul>li {
+    width: 100%;
+    border: 0px solid;
+    /* border-radius: 10%; */
+    margin-top: 30%;
+    /* background-color: floralwhite; */
+    transition: all 0.5s;
+}
+
+.container .textSection .box ul>li:hover {
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.486);
+    transform: scale(1.05);
+}
+
+
+.container .textSection .box ul>li .LiCon {
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+    align-content: center;
+    position: relative;
+    padding: 5%;
+    line-height: 2rem;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+}
+
+.container .textSection .box ul>li .LiCon::after {
+    content: '.....';
+    display: block;
+    width: 90%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    text-align: center;
+    /* background:linear-gradient(to right, white ,rgb(223, 222, 222), rgb(104, 104, 104,) white, black ); */
+    background: linear-gradient(to bottom, white, white, white);
+}
+
+
+.container .textSection .box ul>li .LiCon>p {
+    display: block;
+    border: 0px solid;
+
+}
+
+.container .textSection .box ul>li .LiTitle {
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+    padding: 5%;
+    background-color: black;
+    color: white;
+    /* transform: translateY(10%); */
+    transition: all 0.5s;
+
+}
+
+.container .textSection .box ul>li .LiTitle:hover {
+    background: linear-gradient(to right, black, rgb(124, 124, 124), rgb(82, 82, 82));
+}
+
+
+
+.container .textSection .box ul>li .LiTitle p.titleTxt {
+    position: relative;
+    font-weight: bolder;
+}
+
+.container .textSection .box ul>li .LiTitle p.titleTxt::after {
+    content: ' +더보기';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.container .textSection .box ul>li .LiTitle>p {
+    display: block;
+    border: 0px solid;
+    height: auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.lightBox {
+    width: 40vw;
+    height: auto;
+    border: 1px solid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    z-index: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    padding: 1%;
+}
+
+.lightBox .lightTitle {
+    width: 50%;
+    height: auto;
+    line-height: 2rem;
+    border: 0px solid;
+    margin: 0 auto;
+    /* background-color: wheat; */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.lightBox .lightCon {
+    width: 100%;
+    height: 60vh;
+    border: 0px solid;
+    margin-top: 5%;
+    padding: 5%;
+    overflow-y: scroll;
+}
+
+.lightBox .closeBtn {
+    width: 50px;
+    height: auto;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+}
+
+
+.container .textSection {
+    flex-wrap: wrap
+}
+
+
+@media only screen and (max-width:767px) {
+
+
+    .lightBox {
+        width: 80vw;
+        font-size: 1.4rem;
+    }
+
+
+    .container .textSection .box {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.4rem;
+    }
+
+    .container .textSection .box ul>li .LiCon {
+        height: 60vh;
+    }
+
+
+}

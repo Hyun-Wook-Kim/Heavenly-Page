@@ -1,0 +1,538 @@
+@charset "utf-8";
+@import url(../common/reset.css);
+
+
+.header {
+    width: 100%;
+    height: auto;
+    max-height: 110px;
+   
+    border: 0px solid blueviolet;
+    position: fixed;
+
+    background-color: white;
+    z-index: 999;
+    top:0;
+    transition: all 0.5s;
+}
+
+
+
+
+/* fixed menu */
+
+.asideMusic{
+    width:auto;
+    /* max-width: 192px;
+    min-width: 192px; */
+    height:auto;
+    min-height: 5.56vh;
+    border: 0px solid;
+    border-radius: 25px;
+    background-color: aliceblue;
+    display: flex;
+
+    box-sizing: border-box;
+    position: fixed;
+    top:50%;
+    transform: translateY(-50%);
+    transform: translateX(-80%);
+
+    opacity: 70%;
+    transition: all 1s;
+    padding-left: 20px;
+    z-index: 100;
+}
+.asideMusic:hover{
+    transform: translateX(0%);
+}
+
+.asideMusic .sideMenu{
+    width:auto;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.asideMusic .sideMenu .album{
+    width:auto;
+    height:auto;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+}
+
+.asideMusic .sideMenu .album audio{
+    width:150px;
+}
+
+
+
+.asideMusic .sideMenu .albumCd{
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    background-color: white;
+    transition: all 1s;
+    border-radius: 50%;
+}
+
+.asideMusic:hover .sideMenu .albumCd{
+    transform: rotate(720deg);
+}
+
+
+.asideMusic .sideMenu .albumCd img{
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+
+
+/* hide header 시작 */
+
+.h-header{
+    display: none;
+
+}
+
+
+
+/*HEADER 시작*/
+.header .inner-header {
+    width: 100%;
+    height: auto;
+    
+}
+
+.header .inner-header .main-menu {
+    width: 90%;
+    max-width: 1400px;
+    height: auto;
+    border: 0px solid;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+
+
+/* 
+.header .inner-header .main-menu::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+
+
+.header .inner-header .main-menu .top-menu {
+    width: 100%;
+    height: auto;
+    border: 0px solid red;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10%;
+}
+
+/* .header .inner-header .main-menu .top-menu::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.header .inner-header .main-menu .top-menu .top-right-menu {
+    width: 14.5%;
+    max-width: 174px;
+    height: auto;
+    /* float: right; */
+    border: 0px solid blue;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.header .inner-header .main-menu .top-menu .top-right-menu>ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .inner-header .main-menu .top-menu .top-right-menu>ul>li {
+    width: auto;
+    height: auto;
+    line-height: 30px;
+    border: 0px solid;
+    box-sizing: border-box;
+    /* float: left; */
+    position: relative;
+}
+
+.header .inner-header .main-menu .top-menu .top-right-menu>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+
+}
+
+.header .inner-header .main-menu .top-menu .top-right-menu>ul>li:last-child::after{
+    content: "▼";
+    position: absolute;
+    top:0;
+    right:-20px;
+}
+
+.header .inner-header .main-menu .top-menu .top-right-menu>ul>li>a>img{
+    width:100%;
+    height:auto;
+    display: block;
+}
+
+.header .inner-header .main-menu .bottom-menu {
+    width: 100%;
+    height: auto;
+    border: px solid;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+
+/* .header .inner-header .main-menu .bottom-menu::after {
+    display: block;
+    content: "";
+    clear: both;
+} */
+
+.header .inner-header .main-menu .bottom-menu .gnb {
+    width: 37.5%;
+    max-width: 450px;
+    height: auto;
+    border: 0px solid;
+    box-sizing: border-box;
+    /* float: left; */
+    font-size: 12px;
+    position: relative;
+    /* background-color: aqua; */
+    flex: 1;
+
+}
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul{
+    display: flex;
+    justify-content: space-between;
+    max-height: 100vh;
+}
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li {
+    width: 16.8%;
+    height: 80px;
+    line-height: 80px;
+
+    border: 0px solid;
+    box-sizing: border-box;
+    /* float: left; */
+    text-align: center;
+
+    position: relative;
+    border: 0px solid;
+}
+
+
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li a{
+    display: block;
+    white-space: pre-wrap;
+    font-size: 12px;
+}
+
+
+
+
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li.mainLi a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    background-color:black;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transition: all 0.4s;
+}
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li.mainLi:hover>a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+}
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li ul.sub{
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    /* transition: all 0.3s; */
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li ul.sub>li>a:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li:hover ul.sub{
+    visibility: visible;
+    background-color: white;
+    width:150%;
+    font-size: 1vw;
+    opacity: 1;
+    padding:5%;
+    box-sizing: border-box;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li:hover ul.sub.musical>li>a{
+    line-height: 2.5;
+}
+
+
+
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li:hover ul.sub>li>a{
+    line-height: 4;
+    font-size: 1.2rem;
+}
+
+
+.header .inner-header .main-menu .bottom-menu .gnb>ul>li:first-child{
+    margin:0px;
+}
+
+
+
+/* .header .inner-header .main-menu .bottom-menu .gnb>ul>li>a:hover{
+    background: #000;
+    color: aliceblue;
+} */
+
+.header .inner-header .main-menu .bottom-menu h1.logo {
+    min-width:110px;
+    height: auto;
+    padding:0 30px;
+}
+
+.header .inner-header .main-menu .bottom-menu h1.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header .inner-header .main-menu .bottom-menu .right-menu {
+    width: 37.5%;
+    max-width: 450px;
+    height: auto;
+    border: 0px solid;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* float: right; */
+    /* background-color: aqua; */
+    flex: 1;
+}
+
+.header .inner-header .main-menu .bottom-menu .right-menu .right-menu-gnb{
+    width:100%;
+    max-width:260px;
+    height:auto;
+
+
+}
+
+.header .inner-header .main-menu .bottom-menu .right-menu .right-menu-gnb>ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .inner-header .main-menu .bottom-menu .right-menu .right-menu-gnb>ul>li {
+    width: auto;
+    height: auto;
+    line-height: 28px;
+    border: 0px solid;
+    box-sizing: border-box;
+    /* float: left; */
+}
+
+.header .inner-header .main-menu .bottom-menu .right-menu .right-menu-gnb>ul>li>a {
+    display:block;
+}
+
+
+@media only screen and (max-width:959px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .header .inner-header .main-menu {
+        /* min-width: 100%; */
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media only screen and (max-width:767px) {
+
+
+    .asideMusic {
+        width: 10%;
+        max-width: 192px;
+        min-width: 192px;
+        height: auto;
+        min-height: 5.56vh;
+        border: 0px solid;
+        border-radius: 25px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 20%;
+        transform: translateY(-50%);
+        transform: translateX(-90%);
+
+        opacity: 100%;
+        transition: all 1s;
+        padding-left: 20px;
+        z-index: 100;
+        background-color: aliceblue;
+    }
+
+
+    .header .inner-header .main-menu {
+        display: none;
+    }
+
+    
+    .h-header {
+
+        width: 100%;
+        height: auto;
+        position: fixed;
+        background-color: transparent;
+        top: 0%;
+        right: 0%;
+        z-index: 500;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 0 10px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .h-logo {
+        width: 110px;
+        height: auto;
+    }
+
+    .h-header .h-gnb {
+        width: auto;
+        height: auto;
+        display: flex;
+        transition: all 1s;
+    }
+
+    /* .h-header .h-gnb>a{
+    background-color: white;
+} */
+
+    .h-header .h-gnb:hover {
+        background-color: #ccc;
+    }
+
+    .h-header .h-gnb>a {
+        font-size: 1.5rem
+    }
+
+    .h-header .h-gnb ul {
+        width: 100px;
+        /* height:30px; */
+        position: absolute;
+        transform: translateX(100%) translateY(0%);
+
+        box-sizing: border-box;
+        text-align: center;
+
+    }
+
+    .h-header .h-gnb:hover ul {
+
+
+        transform: translateX(-100%) translateY(0%);
+        background-color: white;
+        transition: all 0.5s;
+    }
+
+    .h-header .h-gnb ul li {
+        width: 100%;
+        border: 0px solid;
+        box-sizing: border-box;
+        line-height: 2rem;
+        cursor: pointer;
+
+    }
+
+    .h-header .h-gnb ul li>a {
+        display: block;
+        /* background: blue; */
+    }
+
+    .h-header .h-gnb>ul>li.first:hover {
+        background-color: black;
+        color: white;
+
+    }
+
+    .h-header .h-gnb>ul>li.first>ul.subUl>li>a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .h-header .h-gnb ul>li>ul.subUl {
+        width: auto;
+        height: 100%;
+        display: none;
+        text-indent: 2rem;
+        position: absolute;
+        top: 0;
+        padding: 5px 10px;
+        left: 0px;
+        text-indent: 0;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .h-header .h-gnb ul>li:hover ul.subUl {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        background-color: transparent;
+        background-color: white;
+    }
+
+
+}
+

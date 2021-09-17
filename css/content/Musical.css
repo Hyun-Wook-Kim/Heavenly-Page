@@ -1,0 +1,246 @@
+@charset 'utf-8';
+@import url(../common/reset.css);
+/* @import url(../common/header.css);
+
+*/
+
+
+html{
+    background: url(../../img/musical/movieBg.gif) no-repeat 50% / cover;
+    /* background: white; */
+    overflow: hidden;
+
+}
+
+.top-left-logo{
+    /* width: 100px; */
+    height:auto;
+    position: fixed;
+    top:2%;
+    left:1%;
+    z-index: 1;
+    font-family:'Nanum Myeongjo', serif;
+    font-size: 2vw;
+    text-align: center;
+    
+}
+
+
+.wrapper{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    opacity: 0  ;
+    /* transition: all 2.5s; */
+}
+
+
+
+.wrapper .slidePointer{
+    width: 80px;
+    height: auto;
+    position: fixed;
+    z-index:5;
+    right: 0%;
+    bottom: 0%;
+    transform: translateY(80%);
+    border: 0px solid;
+    pointer-events: none;
+    position: absolute;
+}
+
+
+
+.wrapper .viewport{
+    width: 100%;
+    height: auto;
+    border: 0px solid white;
+    overflow: hidden;
+    /* padding: 0 %; */
+    position: relative
+    
+}
+
+.wrapper .viewport .boxWrap{
+    /* width: 700%; */
+    /* width: (var(--boxWidth)*6); */
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid blue;
+    position: relative;
+    /* left: -1200px; */
+    /* transition: all 0.2s; */
+}
+
+
+
+
+
+
+.wrapper .viewport .boxWrap .box{
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+    margin: 0 auto;
+    cursor: pointer;
+    /* position: absolute; */
+    /* left: 50px; */
+    /* padding: 0 10px; */
+}
+
+.wrapper .viewport .boxWrap .box>img{
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+
+/* .box.box1{
+    background: url(../../img/musical/musical_0.png) no-repeat 50% / cover
+}
+.box.box2{
+    background: url(../../img/musical/musical_1.png) no-repeat 50% / cover
+}
+.box.box3{
+    background: url(../../img/musical/musical_2.png) no-repeat 50% / cover
+}
+.box.box4{
+    background: url(../../img/musical/musical_3.png) no-repeat 50% / cover;
+}
+.box.box5{
+    background: url(../../img/musical/musical_4.png) no-repeat 50% / cover;
+} */
+
+
+.menu-list{
+    width:5%;
+    height:auto;
+    position: absolute;
+    right: 1%;
+    top: 5%;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.menu-list>img{
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+
+.h-header{
+    width:20%;
+    height:100vh;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    text-align: center;
+    /* right:-100%; */
+    transform: translateX(100%);
+    transition: all 0.3s;
+    background-color: white;
+    
+    
+}
+
+.h-header .closeBtn{
+    border: 0px solid;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    line-height: 3rem;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.h-header>ul .closeBtn:hover{
+    transform: scale(1.1);
+    
+}
+
+
+.h-header>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+
+.h-header>ul>li{
+    width: 100%;
+    border: 0px solid;
+}
+
+.h-header>ul>li:hover{
+    background-color: rgb(83, 79, 79);
+    color: white;
+}
+
+.h-header>ul>li:hover>a{
+    color: white;
+}
+
+.h-header>ul>li>ul.subUl{
+    width:100%;
+    background-color: thistle;
+    text-align: center;
+    display: none;
+    height: auto;
+    transition: all 0.3s;
+}
+
+.h-header>ul>li>ul.subUl>li:hover{
+    background-color: rgb(253, 200, 253);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+ 
+/* 
+@media only screen and (max-width:970px){
+
+    .box.box1{
+        background: url(../../img/musical/musicalMobile_0.png) no-repeat 50% / cover
+    }
+    .box.box2{
+        background: url(../../img/musical/musicalMobile_1.png) no-repeat 50% / cover
+    }
+    .box.box3{
+        background: url(../../img/musical/musicalMobile_2.png) no-repeat 50% / cover
+    }
+    .box.box4{
+        background: url(../../img/musical/musicalmobile_3.png) no-repeat 50% / cover;
+    }
+    .box.box5{
+        background: url(../../img/musical/musicalMobile_4.png) no-repeat 50% / cover;
+    }
+    
+
+    .wrapper .slidePointer{
+        width: 80px;
+        height: auto;
+        position: fixed;
+        z-index:5;
+        right: 50%;
+        bottom: 0%;
+        transform: translate(50%,80%);
+        border: 0px solid;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    
+} */
